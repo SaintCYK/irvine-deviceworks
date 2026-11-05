@@ -35,6 +35,19 @@ body{color:#2A1F16;background-color:#FFF8F2;background-image:radial-gradient(ell
 .btn{background:#FF7A1A;color:#1F1710}
 ol li{background:#fff;border:1px solid #F0DFCF;box-shadow:0 1px 3px rgba(120,60,10,.08)}
 #toast{background:#1F1710;color:#fff}
+
+/* ===== Side rails: a pulse running down the page ===== */
+body::before,body::after{content:"";position:fixed;top:0;bottom:0;width:12px;z-index:1;pointer-events:none;
+ background:
+  linear-gradient(180deg,transparent,#FF7A1A 70%,#FFD2AE) 5px -200px/2px 160px no-repeat,
+  radial-gradient(circle at 6px 120px,#FF7A1A 3.5px,transparent 4.5px) 0 0/12px 240px repeat-y,
+  linear-gradient(90deg,transparent 5px,rgba(255,122,26,.28) 5px,rgba(255,122,26,.28) 7px,transparent 7px);
+ animation:rail 6s linear infinite}
+body::before{left:max(0px,calc(50% - 604px))}
+body::after{right:max(0px,calc(50% - 604px));animation-delay:-3s}
+@keyframes rail{to{background-position:5px 110vh,0 0,0 0}}
+@media(max-width:700px){body::after{display:none}}
+@media(prefers-reduced-motion:reduce){body::before,body::after{animation:none}}
 </style>
 </head>
 <body>
