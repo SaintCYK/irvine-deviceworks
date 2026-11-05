@@ -64,6 +64,14 @@ footer b{color:#fff}
 .light.soft{background:var(--soft)}
 .light .card{box-shadow:0 1px 3px rgba(16,28,45,.07)}
 .bottombar{display:none}
+.ways{display:grid;gap:12px;margin-top:16px}
+.way{position:relative;border:1px solid var(--line);border-radius:14px;padding:16px 18px 16px 62px;background:rgba(255,255,255,.04)}
+.way .i{position:absolute;left:18px;top:18px;width:30px;height:30px;color:var(--acc)}
+.way b{display:block;font-size:18px}.way span{font-size:15.5px;color:var(--mute);display:block}
+.way em{display:inline-block;margin-top:8px;font-style:normal;font-weight:700;font-size:14px;color:var(--acc);background:var(--accsoft);padding:3px 11px;border-radius:99px}
+.way.main{border-color:var(--acc);background:var(--accsoft)}
+.badge{position:absolute;top:-11px;right:16px;background:var(--acc);color:var(--accink)!important;font-size:12.5px!important;font-weight:750;padding:2px 10px;border-radius:99px;display:block}
+.then{margin-top:16px;font-size:15.5px;color:var(--mute)}.then b{color:var(--ink);display:inline}
 nav a{white-space:nowrap}nav{gap:22px}
 @media(max-width:1020px){nav{display:none}}
 footer b{display:block;margin-bottom:6px}
@@ -127,17 +135,17 @@ footer a{color:#fff;text-decoration:underline}
 <a class="btn sm" data-wa href="#"><svg class="i" aria-hidden="true" style="width:19px;height:19px"><use href="#chat"/></svg>WhatsApp us</a></div></header>
 <main id="top">
 <div class="hero"><div class="w"><div>
-<span class="eyebrow"><svg class="i" aria-hidden="true" style="width:17px;height:17px"><use href="#pin"/></svg>Local, family-run drop-off in Irvine</span>
-<h1>Phone, console and computer repairs in Irvine.</h1>
-<p class="lead">Message us, drop your device off at the shop, and get a clear quote before any work starts. Or we collect it from your door.</p>
-<div class="cta"><a class="btn" data-wa href="#"><svg class="i" aria-hidden="true"><use href="#chat"/></svg>Get a quote on WhatsApp</a><a class="btn o" href="#how">See how it works</a></div>
-<div class="ticks"><span><svg class="i" aria-hidden="true"><use href="#check"/></svg>Quote before any work</span><span><svg class="i" aria-hidden="true"><use href="#check"/></svg>30-day warranty</span><span><svg class="i" aria-hidden="true"><use href="#check"/></svg>Reply within 12 hours</span></div>
+<span class="eyebrow"><svg class="i" style="width:17px;height:17px" aria-hidden="true"><use href="#home"/></svg>We collect and return, or you drop off</span>
+<h1>We collect it, fix it and bring it back.</h1>
+<p class="lead">Phone, console and computer repairs in Irvine and Ayrshire. We pick your device up from your door and return it repaired, or you drop it off at the shop. You get a clear quote before any work starts.</p>
+<div class="cta"><a class="btn" data-wa href="#"><svg class="i" aria-hidden="true"><use href="#chat"/></svg>Book a pickup on WhatsApp</a><a class="btn o" href="#how">See how it works</a></div>
+<div class="ticks"><span><svg class="i" aria-hidden="true"><use href="#check"/></svg>Quote before any work</span><span><svg class="i" aria-hidden="true"><use href="#check"/></svg>30-day warranty</span><span><svg class="i" aria-hidden="true"><use href="#check"/></svg>Free assessment</span></div>
 <ul class="devs"><li><svg class="i" aria-hidden="true"><use href="#ps"/></svg>PS5 and PS4</li><li><svg class="i" aria-hidden="true"><use href="#xbox"/></svg>Xbox</li><li><svg class="i" aria-hidden="true"><use href="#switch"/></svg>Switch</li><li><svg class="i" aria-hidden="true"><use href="#ctrl"/></svg>Controllers</li><li><svg class="i" aria-hidden="true"><use href="#phone"/></svg>Phones</li><li><svg class="i" aria-hidden="true"><use href="#laptop"/></svg>Computers</li></ul>
 </div>
-<div class="steps"><h2>How a repair works</h2><span style="font-size:15.5px;color:var(--mute)">Three steps, and you stay in control.</span>
-<ol style="margin-top:12px"><li><div><b>Message us on WhatsApp</b><span>Tell us the device and the fault. You get a reference number.</span></div></li>
-<li><div><b>Hand it in at the shop</b><span>Write the reference on the packaging and give it to the till. Or choose home pickup.</span></div></li>
-<li><div><b>Approve the quote, collect</b><span>We assess it, send a price, and only repair once you say yes.</span></div></li></ol></div>
+<div class="steps"><h2>Two ways to hand it over</h2><span style="font-size:15.5px;color:var(--mute)">Either way, you approve the price first.</span>
+<div class="ways"><div class="way main"><span class="badge">We come to you</span><svg class="i" aria-hidden="true"><use href="#home"/></svg><b>We collect and return</b><span>We pick it up from your door, repair it and bring it back. Irvine, Ayr and Kilmarnock.</span><em>£30 pickup and return</em></div>
+<div class="way"><svg class="i" aria-hidden="true"><use href="#pin"/></svg><b>Drop off in Irvine</b><span>Hand it to the till at Anne's Stores, 9am to 9pm.</span><em>Free assessment</em></div></div>
+<p class="then"><b>Then:</b> we send a quote, you approve it, we repair it and tell you when it's ready.</p></div>
 </div></div>
 
 <section id="repairs" class="light"><div class="w"><h2 class="t">What we repair</h2><p class="sub">Every repair starts with an assessment and a quote. You approve the price before any work begins.</p>
