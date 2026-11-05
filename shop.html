@@ -26,11 +26,20 @@ ol li{counter-increment:s;flex:1 1 200px;background:rgba(255,255,255,.05);border
 ol li::before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--cyan);color:var(--navy);margin:0 auto 10px;font-weight:800}
 .note{margin-top:26px;font-size:15px;color:var(--mute);max-width:60ch}
 #toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#fff;color:#101C2D;padding:14px 20px;border-radius:12px;font-weight:600}
+
+/* ===== Orange light theme ===== */
+:root{--navy:#1F1710;--blue:#fff;--cyan:#FF7A1A;--mute:#6B5A4B}
+body{color:#2A1F16;background-color:#FFF8F2;background-image:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(255,122,26,.24),transparent 70%),linear-gradient(rgba(194,84,10,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(194,84,10,.07) 1px,transparent 1px);background-size:auto,56px 56px,56px 56px}
+.panel{background:#fff;border:1px solid #F0DFCF;box-shadow:0 12px 32px rgba(194,84,10,.14)}
+.qr{border:2px solid #FFD2AE;color:#1F1710}
+.btn{background:#FF7A1A;color:#1F1710}
+ol li{background:#fff;border:1px solid #F0DFCF;box-shadow:0 1px 3px rgba(120,60,10,.08)}
+#toast{background:#1F1710;color:#fff}
 </style>
 </head>
 <body>
 <div class="brand">
- <svg viewBox="0 0 120 120" width="44" height="44" aria-hidden="true"><rect width="120" height="120" rx="28" fill="#173653"/><g fill="none" stroke="#39BDF5" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M31 30v60"/><path d="M48 30h14a30 30 0 0 1 0 60H48z"/></g><circle cx="62" cy="60" r="5" fill="#fff"/></svg>
+ <svg viewBox="0 0 120 120" width="44" height="44" aria-hidden="true"><rect width="120" height="120" rx="28" fill="#FF7A1A"/><g fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M31 30v60"/><path d="M48 30h14a30 30 0 0 1 0 60H48z"/></g><circle cx="62" cy="60" r="5" fill="#1F1710"/></svg>
  Irvine DeviceWorks
 </div>
 <h1>Drop off a device for repair</h1>
