@@ -27,34 +27,23 @@ ol li::before{content:counter(s);display:grid;place-items:center;width:34px;heig
 .note{margin-top:26px;font-size:15px;color:var(--mute);max-width:60ch}
 #toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#fff;color:#101C2D;padding:14px 20px;border-radius:12px;font-weight:600}
 
-/* ===== Orange light theme ===== */
-:root{--navy:#1F1710;--blue:#fff;--cyan:#FF7A1A;--mute:#6B5A4B}
-body{color:#2A1F16;background-color:#FFF8F2;background-image:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(255,122,26,.24),transparent 70%),linear-gradient(rgba(194,84,10,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(194,84,10,.07) 1px,transparent 1px);background-size:auto,56px 56px,56px 56px}
-.panel{background:#fff;border:1px solid #F0DFCF;box-shadow:0 12px 32px rgba(194,84,10,.14)}
-.qr{border:2px solid #FFD2AE;color:#1F1710}
-.btn{background:#FF7A1A;color:#1F1710}
-ol li{background:#fff;border:1px solid #F0DFCF;box-shadow:0 1px 3px rgba(120,60,10,.08)}
-#toast{background:#1F1710;color:#fff}
-
-/* ===== Side rails: a pulse running down the page ===== */
-body::before,body::after{content:"";position:fixed;top:0;bottom:0;width:12px;z-index:1;pointer-events:none;
- background:
-  linear-gradient(180deg,transparent,#FF7A1A 70%,#FFD2AE) 5px -200px/2px 160px no-repeat,
-  radial-gradient(circle at 6px 120px,#FF7A1A 3.5px,transparent 4.5px) 0 0/12px 240px repeat-y,
-  linear-gradient(90deg,transparent 5px,rgba(255,122,26,.28) 5px,rgba(255,122,26,.28) 7px,transparent 7px);
- animation:rail 6s linear infinite}
-body::before{left:max(0px,calc(50% - 604px))}
-body::after{right:max(0px,calc(50% - 604px));animation-delay:-3s}
-@keyframes rail{to{background-position:5px 110vh,0 0,0 0}}
-@media(max-width:700px){body::after{display:none}}
-@media(prefers-reduced-motion:reduce){body::before,body::after{animation:none}}
+/* match main site: navy with white panels */
+.panel{background:#fff;color:#101C2D;border:0;box-shadow:0 18px 44px rgba(0,0,0,.35)}
+.panel .sm{color:#44556B}
+.qr{border:2px solid #DCE5EF}
+.btn{background:#39BDF5;color:#101C2D}
+ol li{background:#fff;color:#101C2D;border:0;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+ol li::before{background:#39BDF5;color:#101C2D}
+.info{display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:center;margin:0 0 6px;font-size:15px;color:#C9D6E6}
+.alt{margin-top:14px;max-width:62ch;font-size:15.5px;color:#fff;background:rgba(57,189,245,.14);border:1px solid rgba(57,189,245,.4);border-radius:12px;padding:12px 18px}
 </style>
 </head>
 <body>
 <div class="brand">
- <svg viewBox="0 0 120 120" width="44" height="44" aria-hidden="true"><rect width="120" height="120" rx="28" fill="#FF7A1A"/><g fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M31 30v60"/><path d="M48 30h14a30 30 0 0 1 0 60H48z"/></g><circle cx="62" cy="60" r="5" fill="#1F1710"/></svg>
+ <svg viewBox="0 0 120 120" width="44" height="44" aria-hidden="true"><rect width="120" height="120" rx="28" fill="#173653"/><g fill="none" stroke="#39BDF5" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M31 30v60"/><path d="M48 30h14a30 30 0 0 1 0 60H48z"/></g><circle cx="62" cy="60" r="5" fill="#fff"/></svg>
  Irvine DeviceWorks
 </div>
+<div class="info"><span>Anne's Stores, 22 Burns Street, Irvine</span><span>Open 9am to 9pm</span></div>
 <h1>Drop off a device for repair</h1>
 <p class="lead">Message us on WhatsApp. Answer a few questions, send a photo, and you'll get a reference number.</p>
 
@@ -77,6 +66,7 @@ body::after{right:max(0px,calc(50% - 604px));animation-delay:-3s}
  <li>Write down your reference number</li>
  <li>Hand your device and number to the till</li>
 </ol>
+<p class="alt">Prefer us to collect it from your home? Say so in the chat. Home pickup and return is a flat £30. If you hand it in here and want it delivered later, that is a flat £15.</p>
 <p class="note">We'll reply within 12 hours. Please don't send passwords or passcodes in the chat.</p>
 <div id="toast" role="status" hidden>Preview only: the WhatsApp number is not set yet.</div>
 
