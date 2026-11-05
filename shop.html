@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>In-store | Irvine DeviceWorks</title>
+<style>
+@font-face{font-family:"Inter";src:url("fonts/inter.woff2") format("woff2");font-weight:100 900}
+:root{--navy:#101C2D;--blue:#173653;--cyan:#39BDF5;--mute:#C9D6E6}
+*{box-sizing:border-box;margin:0}
+html,body{min-height:100%}
+body{font-family:Inter,system-ui,sans-serif;color:#fff;background-color:var(--navy);background-image:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(57,189,245,.28),transparent 70%),linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:auto,56px 56px,56px 56px;text-align:center;display:flex;flex-direction:column;align-items:center;padding:40px 24px;line-height:1.5}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700;font-size:22px}
+h1{font-size:clamp(34px,5.2vw,56px);line-height:1.08;letter-spacing:-.02em;margin:28px 0 12px;max-width:18ch}
+.lead{font-size:clamp(17px,2.2vw,22px);color:var(--mute);max-width:46ch}
+.main{display:flex;flex-wrap:wrap;gap:28px;justify-content:center;align-items:stretch;margin:34px 0 28px;width:100%;max-width:920px}
+.panel{flex:1 1 360px;background:var(--blue);border:1px solid rgba(255,255,255,.16);border-radius:20px;padding:30px 26px;display:flex;flex-direction:column;align-items:center;gap:18px}
+.panel h2{font-size:22px}
+.qr{background:#fff;border-radius:16px;padding:16px;width:260px;height:260px;display:grid;place-items:center;color:#101C2D;font-size:15px;font-weight:600}
+.qr svg,.qr img{width:100%;height:100%;display:block}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:20px 30px;border-radius:14px;font-weight:700;font-size:22px;text-decoration:none;background:var(--cyan);color:var(--navy);min-height:64px}
+.sm{font-size:16px;color:var(--mute);max-width:34ch}
+ol{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:16px;justify-content:center;max-width:920px;width:100%;counter-reset:s}
+ol li{counter-increment:s;flex:1 1 200px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:18px 16px;font-size:17px;font-weight:600}
+ol li::before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--cyan);color:var(--navy);margin:0 auto 10px;font-weight:800}
+.note{margin-top:26px;font-size:15px;color:var(--mute);max-width:60ch}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#fff;color:#101C2D;padding:14px 20px;border-radius:12px;font-weight:600}
+</style>
+</head>
+<body>
+<div class="brand">
+ <svg viewBox="0 0 120 120" width="44" height="44" aria-hidden="true"><rect width="120" height="120" rx="28" fill="#173653"/><g fill="none" stroke="#39BDF5" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path d="M31 30v60"/><path d="M48 30h14a30 30 0 0 1 0 60H48z"/></g><circle cx="62" cy="60" r="5" fill="#fff"/></svg>
+ Irvine DeviceWorks
+</div>
+<h1>Drop off a device for repair</h1>
+<p class="lead">Message us on WhatsApp. Answer a few questions, send a photo, and you'll get a reference number.</p>
+
+<div class="main">
+ <div class="panel">
+  <h2>Use your own phone</h2>
+  <div class="qr" id="qr">Scan with your phone camera</div>
+  <p class="sm">Point your phone camera at this code to open WhatsApp.</p>
+ </div>
+ <div class="panel">
+  <h2>Or use this iPad</h2>
+  <a class="btn" id="go" href="#">Open WhatsApp</a>
+  <p class="sm">No working phone? Tap here and message us from this iPad.</p>
+ </div>
+</div>
+
+<ol>
+ <li>Send us a message</li>
+ <li>Answer the questions</li>
+ <li>Write down your reference number</li>
+ <li>Hand your device and number to the till</li>
+</ol>
+<p class="note">We'll reply within 12 hours. Please don't send passwords or passcodes in the chat.</p>
+<div id="toast" role="status" hidden>Preview only: the WhatsApp number is not set yet.</div>
+
+<script src="config.js"></script>
+<script src="qrcode.js"></script>
+<script>
+(function(){
+  var c=window.SITE_CONFIG||{};
+  var num=(c.WHATSAPP_NUMBER||"").replace(/\D/g,"");
+  var link=num?"https://wa.me/"+num+"?text="+encodeURIComponent(c.MESSAGE||"Hi, I'd like a quote for a repair."):"";
+  var go=document.getElementById("go");
+  if(link){
+    go.href=link;
+    var q=qrcode(0,"M");q.addData(link);q.make();
+    document.getElementById("qr").innerHTML=q.createSvgTag({cellSize:4,margin:0,scalable:true});
+  }else{
+    go.addEventListener("click",function(e){e.preventDefault();var t=document.getElementById("toast");t.hidden=false;setTimeout(function(){t.hidden=true},3500)});
+  }
+})();
+</script>
+</body>
+</html>
