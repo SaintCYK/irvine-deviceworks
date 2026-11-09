@@ -4,6 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="DeviceWorks">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <title>In-store | Irvine DeviceWorks</title>
 <style>
 @font-face{font-family:"Inter";src:url("fonts/inter.woff2") format("woff2");font-weight:100 900}
@@ -176,7 +182,7 @@ ol li:nth-child(1)::before{animation-delay:3s}ol li:nth-child(2)::before{animati
   var link=num?"https://wa.me/"+num+"?text="+encodeURIComponent(c.MESSAGE||"Hi, I'd like a quote for a repair."):"";
   var go=document.getElementById("go");
   if(link){
-    go.href=link;
+    go.href=link;go.addEventListener("click",function(e){e.preventDefault();window.location.href=link});
     var q=qrcode(0,"M");q.addData(link);q.make();
     document.getElementById("qr").innerHTML=q.createSvgTag({cellSize:4,margin:0,scalable:true});
   }else{
