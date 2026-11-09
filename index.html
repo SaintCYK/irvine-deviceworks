@@ -1,213 +1,279 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Irvine DeviceWorks | Console, phone and computer repairs in Ayrshire</title>
 <meta name="robots" content="noindex">
 <meta name="description" content="Phone, console and computer repairs in Irvine and Ayrshire. We collect from your door and bring it back for a flat £30, or you can drop it off at our Irvine shop.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='28' fill='%2339BDF5'/%3E%3Cg fill='none' stroke='%23101C2D' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M31 30v60'/%3E%3Cpath d='M48 30h14a30 30 0 0 1 0 60H48z'/%3E%3C/g%3E%3C/svg%3E">
 <style>
-@font-face{font-family:"Inter";src:url("fonts/inter.woff2") format("woff2");font-weight:100 900}
-:root{--card:#fff;--bg:#fff;--soft:#F4F7FB;--ink:#14213D;--mute:#4B5772;--line:#DDE4EF;--acc:#1F5FD1;--accink:#fff;--accsoft:#E8F0FD;--r:14px}
-[data-t=night]{--bg:#101C2D;--soft:#13233A;--card:#173653;--ink:#fff;--mute:#C9D6E6;--line:rgba(255,255,255,.15);--acc:#39BDF5;--accink:#101C2D;--accsoft:rgba(57,189,245,.15)}
-[data-t=teal]{--bg:#FBFAF7;--soft:#F1EEE7;--ink:#1B2B2A;--mute:#4F615F;--line:#E2DDD2;--acc:#0F766E;--accsoft:#DDF1EE}
-[data-t=indigo]{--bg:#fff;--soft:#F5F5FB;--ink:#1E1B3A;--mute:#55557A;--line:#E1E1F2;--acc:#4338CA;--accsoft:#ECEBFD}
-*{box-sizing:border-box;margin:0}
-body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);font-size:17px;line-height:1.6}
-.w{max-width:1120px;margin:0 auto;padding:0 24px}
-.i{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
-.strip{background:#0A1320;color:#C9D6E6;font-size:14.5px}
-.strip .w{display:flex;gap:10px 28px;flex-wrap:wrap;justify-content:center;padding-top:9px;padding-bottom:9px}
-.strip span{display:inline-flex;align-items:center;gap:8px}.strip .i{width:17px;height:17px}
-header{background:var(--bg);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
-.bar{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:750;font-size:19px}
-.logo{width:38px;height:38px;border-radius:10px;background:var(--acc);display:grid;place-items:center}
-nav{display:flex;gap:28px;font-size:16px;color:var(--mute)}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:12px;font-weight:650;font-size:17px;background:var(--acc);color:var(--accink);border:2px solid var(--acc);white-space:nowrap}
-.btn.o{background:transparent;color:var(--ink);border-color:var(--line)}
-.btn.sm{padding:10px 16px;font-size:15px}
-.hero{padding:72px 0 64px;background-color:var(--bg);background-image:radial-gradient(ellipse 60% 70% at 50% 0%,rgba(57,189,245,.22),transparent 70%),linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:auto,56px 56px,56px 56px;background-position:center top}
-.hero .w{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
-.eyebrow{display:inline-flex;gap:8px;align-items:center;background:var(--accsoft);color:var(--acc);font-weight:650;font-size:14.5px;padding:6px 13px;border-radius:99px}
-h1{font-size:50px;line-height:1.1;letter-spacing:-.022em;font-weight:760;margin:18px 0 18px}
-.lead{font-size:20px;color:var(--mute);max-width:46ch}
-.cta{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 22px}
-.ticks{display:flex;gap:10px 22px;flex-wrap:wrap;font-size:15.5px;color:var(--mute)}
-.ticks span{display:inline-flex;gap:7px;align-items:center}.ticks .i{width:19px;height:19px;color:var(--acc)}
-.steps{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:0 20px 44px rgba(0,0,0,.35)}
-.steps h2{font-size:20px;margin-bottom:6px}
-.steps ol{list-style:none;padding:0;counter-reset:s}
-.steps li{display:flex;gap:14px;padding:14px 0;border-top:1px solid var(--line);counter-increment:s}
-.steps li:first-of-type{border-top:0}
-.steps li::before{content:counter(s);flex:none;width:32px;height:32px;border-radius:50%;background:var(--acc);color:var(--accink);font-weight:700;display:grid;place-items:center;font-size:15px}
-.steps b{display:block}.steps span{font-size:15.5px;color:var(--mute)}
-section{padding:68px 0}.soft{background:var(--soft)}
-h2.t{font-size:34px;letter-spacing:-.015em;line-height:1.2;font-weight:740}
-.sub{color:var(--mute);margin-top:10px;max-width:58ch}
-.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px}
-.card .i{color:var(--acc);width:30px;height:30px}.card h3{font-size:19px;margin:14px 0 6px}.card p{font-size:16px;color:var(--mute)}
-.promise{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:34px}
-.promise .card b{display:block;font-size:26px;margin-top:10px;color:var(--acc)}
-.promise .card span{font-size:15.5px;color:var(--mute)}
-.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
-.photo{aspect-ratio:4/3;border-radius:18px;background:repeating-linear-gradient(45deg,var(--accsoft),var(--accsoft) 14px,var(--card) 14px,var(--card) 28px);border:1px dashed var(--acc);display:grid;place-items:center;color:var(--acc);font-weight:650;text-align:center;padding:20px;font-size:16px}
-.faq details{border-bottom:1px solid var(--line);padding:18px 0}.faq summary{font-weight:650;cursor:pointer;list-style:none;display:flex;justify-content:space-between}
-.faq summary::after{content:"+";color:var(--acc);font-size:24px;line-height:1}
-.faq details p{margin-top:8px;color:var(--mute)}
-.visit{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:30px}
-.light{--bg:#fff;--soft:#F3F7FB;--card:#fff;--ink:#101C2D;--mute:#44556B;--line:#DCE5EF;--acc:#0B6FA8;--accsoft:rgba(11,111,168,.10);background:var(--bg);color:var(--ink)}
-.light.soft{background:var(--soft)}
-.light .card{box-shadow:0 1px 3px rgba(16,28,45,.07)}
-.bottombar{display:none}
-.way.alt2{padding:13px 18px 13px 62px;background:transparent}
-.way.alt2 b{font-size:16.5px}.way.alt2 span{font-size:14.5px}
-.promise{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))!important}
-.path.feat{border-color:var(--acc);box-shadow:0 8px 28px rgba(11,111,168,.14);position:relative}
-.tag.solid{background:var(--acc);color:#fff;margin:0 0 12px}
-.two{grid-template-columns:1.1fr .9fr}
-.ways{display:grid;gap:12px;margin-top:16px}
-.way{position:relative;border:1px solid var(--line);border-radius:14px;padding:16px 18px 16px 62px;background:rgba(255,255,255,.04)}
-.way .i{position:absolute;left:18px;top:18px;width:30px;height:30px;color:var(--acc)}
-.way b{display:block;font-size:18px}.way span{font-size:15.5px;color:var(--mute);display:block}
-.way em{display:inline-block;margin-top:8px;font-style:normal;font-weight:700;font-size:14px;color:var(--acc);background:var(--accsoft);padding:3px 11px;border-radius:99px}
-.way.main{border-color:var(--acc);background:var(--accsoft)}
-.badge{position:absolute;top:-11px;right:16px;background:var(--acc);color:var(--accink)!important;font-size:12.5px!important;font-weight:750;padding:2px 10px;border-radius:99px;display:block}
-.then{margin-top:16px;font-size:15.5px;color:var(--mute)}.then b{color:var(--ink);display:inline}
-nav a{white-space:nowrap}nav{gap:22px}
-@media(max-width:1020px){nav{display:none}}
-.light .btn:not(.o){color:#fff}
-.light .btn.o{color:var(--ink)}
-.map iframe{background:#e8eef5}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
-a{color:inherit;text-decoration:none}
-.devs{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
-.devs li{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:99px;padding:7px 14px 7px 11px;font-size:14.5px;font-weight:600;background:rgba(255,255,255,.05)}
-.devs .i{width:19px;height:19px;color:var(--acc)}
-.grid9{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
-.grid9 .card .i{width:28px;height:28px}
-.note{margin-top:22px;font-size:14.5px;color:var(--mute)}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:34px}
-.path{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px}
-.path h3{display:flex;align-items:center;gap:12px;font-size:21px}.path h3 .i{color:var(--acc);width:28px;height:28px}
-.path ol{list-style:none;padding:0;margin:16px 0 0;counter-reset:s}
-.path li{counter-increment:s;display:flex;gap:14px;padding:8px 0;font-size:16px}
-.path li::before{content:counter(s);flex:none;width:26px;height:26px;border-radius:50%;background:var(--accsoft);color:var(--acc);font-weight:700;font-size:13px;display:grid;place-items:center;margin-top:1px}
-.tag{display:inline-block;margin-top:14px;font-size:14px;font-weight:650;color:var(--acc);background:var(--accsoft);padding:6px 12px;border-radius:99px}
-.findus{display:grid;grid-template-columns:.85fr 1.15fr;gap:36px;margin-top:34px;align-items:stretch}
-.findus .info{display:flex;flex-direction:column;gap:16px}
-.findus .card b{display:block;margin-bottom:4px}.findus .card p{color:var(--mute);font-size:16px}
-.map{border-radius:18px;overflow:hidden;border:1px solid var(--line);min-height:380px;background:var(--soft);box-shadow:0 8px 28px rgba(16,28,45,.10)}
-.map iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
-.chips span{padding:6px 13px;border-radius:99px;background:var(--accsoft);color:var(--acc);font-size:14.5px;font-weight:650}
-.actions{display:flex;gap:10px;flex-wrap:wrap}
-.ph{background:var(--accsoft);color:var(--acc);padding:1px 7px;border-radius:5px;font-size:14px}
+@font-face{font-family:"Bricolage";src:url("fonts/brico.woff2") format("woff2");font-weight:200 800;font-display:swap}
+@font-face{font-family:"Source";src:url("fonts/source.woff2") format("woff2");font-weight:200 900;font-display:swap}
+:root{--navy:#0B1F3A;--deep:#081529;--cyan:#22D3EE;--cyan-ink:#0A7E96;--paper:#F3F7FB;--white:#fff;--steel:#9FB4CC;--ink:#10243F;--mute:#4A5F78;--line:#D5DFEA;--done:#34D399;--gut:64px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Source",system-ui,sans-serif;font-size:18px;line-height:1.6;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Bricolage",system-ui,sans-serif;margin:0;line-height:1.08;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:3px;border-radius:4px}
+.w{max-width:1160px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--cyan);color:var(--navy);font:700 17px "Source",sans-serif;padding:14px 24px;border-radius:12px;text-decoration:none;border:2px solid var(--cyan);transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.o{background:transparent;color:var(--cyan)}
+.btn.sm{padding:9px 16px;font-size:16px}
+.i{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
 
-@media(max-width:860px){.two,.findus{grid-template-columns:1fr}.grid9{grid-template-columns:1fr 1fr}body{padding-bottom:70px}}
-@media(max-width:520px){.grid9{grid-template-columns:1fr}.actions .btn{width:100%}}
-@media(max-width:860px){nav{display:none}h1{font-size:36px}.hero{padding:40px 0}.hero .w,.about,.visit{grid-template-columns:1fr;gap:28px}.g3,.promise{grid-template-columns:1fr 1fr}section{padding:48px 0}h2.t{font-size:28px}.strip .w{font-size:13.5px}
-.bottombar{display:flex;position:sticky;bottom:0;gap:10px;padding:10px 14px;background:var(--bg);border-top:1px solid var(--line);z-index:6}.bottombar .btn{flex:1;justify-content:center;padding:13px}}
-@media(max-width:520px){.g3,.promise{grid-template-columns:1fr}.btn{width:100%;justify-content:center}.bar .btn{width:auto}.cta .btn{width:100%}}
+/* header */
+header{background:var(--navy);position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(255,255,255,.08)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;font:800 20px "Bricolage",sans-serif;color:#fff;text-decoration:none;letter-spacing:-.01em}
+.brand .lg{width:34px;height:34px;border-radius:9px;background:var(--cyan);display:grid;place-items:center}
+nav{display:flex;gap:26px}nav a{color:var(--steel);text-decoration:none;font-weight:600;font-size:16px;white-space:nowrap}nav a:hover{color:#fff}
 
-footer{background:#0A1320;color:#C9D6E6;font-size:15.5px;line-height:1.6}
-.fband{background:linear-gradient(90deg,#0f2c52,#0b3b5c);padding:40px 0}
+/* the route: a thin line running down the page, each section is a stop */
+.sec{position:relative;padding:84px 0}
+.sec>.w{display:grid;grid-template-columns:var(--gut) 1fr;padding-left:0}
+.sec>.w>.rail{position:relative}
+.sec>.w>.rail::before{content:"";position:absolute;left:23px;top:-84px;bottom:-84px;width:2px;background:var(--rl,var(--cyan-ink));opacity:.55}
+.sec>.w>.rail::after{content:"";position:absolute;left:15px;top:12px;width:18px;height:18px;border-radius:50%;background:var(--bg);border:3px solid var(--rl,var(--cyan-ink))}
+.sec.dark{--bg:var(--navy);--rl:var(--cyan);background:var(--navy);color:#fff}
+.sec.paper{--bg:var(--paper);background:var(--paper)}
+.sec.white{--bg:var(--white);background:var(--white)}
+.sec.first>.w>.rail::before{top:0}
+h2.t{font-size:clamp(32px,4.2vw,48px);font-weight:800;max-width:18ch}
+.sub{color:var(--mute);max-width:60ch;margin:14px 0 0}
+
+/* hero */
+.hero{padding:76px 0 96px}
+.hero .cols{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+h1{font-size:clamp(40px,5.4vw,68px);font-weight:800;letter-spacing:-.035em;line-height:1}
+h1 span{display:block}
+.hero .lead{color:#C7D6E8;max-width:46ch;margin:26px 0 0;font-size:19px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.hero .fine{margin:18px 0 0;color:var(--steel);font-size:16px}
+
+/* ticket */
+.ticket{position:relative;background:var(--paper);color:var(--ink);border-radius:16px;padding:26px 28px 22px;box-shadow:0 30px 60px -20px rgba(0,0,0,.55);
+ -webkit-mask:radial-gradient(circle 11px at 0 64%,#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 11px at 100% 64%,#0000 98%,#000) right/51% 100% no-repeat;
+ mask:radial-gradient(circle 11px at 0 64%,#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 11px at 100% 64%,#0000 98%,#000) right/51% 100% no-repeat;
+ transform:rotate(1.6deg)}
+.tk-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.tk-top b{font:700 16px "Bricolage",sans-serif}
+.tk-ref{font:600 22px ui-monospace,"SF Mono",Menlo,Consolas,monospace;letter-spacing:.02em;color:var(--navy)}
+.tk-dev{margin:6px 0 20px;color:var(--mute);font-size:16px}
+.tk-steps{list-style:none;margin:0;padding:0;position:relative}
+.tk-steps li{position:relative;padding:0 0 18px 40px;font-weight:600;line-height:1.3}
+.tk-steps li small{display:block;font-weight:400;color:var(--mute);font-size:14.5px}
+.tk-steps li::before{content:"";position:absolute;left:8px;top:26px;bottom:-2px;width:2px;background:var(--line)}
+.tk-steps li:last-child::before{display:none}
+.tk-steps li i{position:absolute;left:0;top:2px;width:18px;height:18px;border-radius:50%;border:2px solid var(--steel);background:var(--paper);transition:none}
+.tk-steps li.on i{background:var(--done);border-color:var(--done)}
+.tk-steps li.on::before{background:var(--done)}
+.tk-note{border-top:2px dashed var(--line);margin-top:6px;padding-top:14px;font-size:14.5px;color:var(--mute)}
+@media(prefers-reduced-motion:no-preference){
+ .js .tk-steps li i,.js .tk-steps li::before{transition:background .35s,border-color .35s}
+}
+
+/* repair list: ruled rows, no cards */
+.list{margin:40px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+.list li{display:grid;grid-template-columns:minmax(150px,.8fr) 1.2fr;gap:18px;padding:18px 0;border-top:1px solid var(--line)}
+.list b{font:700 19px "Bricolage",sans-serif;letter-spacing:-.01em}
+.list span{color:var(--mute);font-size:16.5px}
+.note{margin:28px 0 0;color:var(--mute);font-size:15.5px;max-width:70ch}
+
+/* how it works */
+.paths{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;margin-top:44px}
+.path h3{font-size:26px;font-weight:700;margin-bottom:6px}
+.path .kick{display:inline-block;background:var(--navy);color:#fff;font:700 14px "Source",sans-serif;padding:3px 12px;border-radius:99px;margin-bottom:12px}
+.path ol{margin:16px 0 0;padding:0;list-style:none;counter-reset:s}
+.path li{counter-increment:s;position:relative;padding:12px 0 12px 46px;border-top:1px solid var(--line)}
+.path li::before{content:counter(s);position:absolute;left:0;top:11px;width:30px;height:30px;border-radius:50%;background:var(--paper);border:1.5px solid var(--cyan-ink);color:var(--cyan-ink);font:700 15px "Source";display:grid;place-items:center}
+.paper .path li::before{background:var(--white)}
+.path .cost{display:block;margin-top:14px;font-weight:700;color:var(--cyan-ink)}
+
+/* price list: receipt lines with dotted leaders */
+.prices{margin:40px 0 0;padding:0;list-style:none;max-width:820px}
+.prices li{display:flex;align-items:baseline;gap:10px;padding:16px 0;border-top:1px solid var(--line)}
+.prices .n{font:700 20px "Bricolage",sans-serif;flex:none}
+.prices .d{flex:1;border-bottom:2px dotted #B5C4D6;transform:translateY(-4px);min-width:20px}
+.prices .v{font:800 28px "Bricolage",sans-serif;flex:none;color:var(--navy)}
+.prices p{flex-basis:100%;margin:2px 0 0;color:var(--mute);font-size:16.5px;max-width:64ch}
+.prices li{flex-wrap:wrap}
+
+/* find us */
+.find{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;margin-top:40px;align-items:stretch}
+.facts{display:grid;gap:0}
+.facts div{padding:14px 0;border-top:1px solid var(--line)}
+.facts b{display:block;font:700 17px "Bricolage",sans-serif}
+.facts span{color:var(--mute)}
+.facts a{color:var(--cyan-ink);font-weight:600}
+.map{border-radius:14px;overflow:hidden;border:1px solid var(--line);min-height:320px}
+.map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+.acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.acts .btn.o{color:var(--cyan-ink);border-color:var(--cyan-ink)}
+
+/* faq */
+.faq{max-width:760px;margin-top:30px}
+.faq details{border-top:1px solid var(--line);padding:18px 0}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{font:700 19px "Bricolage",sans-serif;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--cyan-ink);font-size:26px;line-height:1}
+.faq details[open] summary::after{content:"\2212"}
+.faq p{margin:10px 0 0;color:var(--mute);max-width:62ch}
+
+/* footer */
+footer{background:var(--deep);color:#C9D6E6;font-size:16px;line-height:1.6}
+.fband{background:linear-gradient(90deg,#0f2c52,#0b3b5c);padding:44px 0}
 .fband .w{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
-.fband h3{margin:0;color:#fff;font-size:28px;letter-spacing:-.3px}.fband p{margin:6px 0 0;color:#b9cde2}
-.fband .acts{display:flex;gap:12px;flex-wrap:wrap}
-.fcols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:36px;padding-top:48px;padding-bottom:36px}
-footer h4{color:#fff;font-size:13.5px;letter-spacing:.07em;text-transform:uppercase;margin:0 0 12px}
-footer .fl a{display:block;color:#C9D6E6;text-decoration:none;margin:6px 0}footer .fl a:hover{color:#22d3ee}
-footer a.fe{color:#22d3ee;font-weight:600;text-decoration:underline}footer a.fe:hover{color:#fff}
-.flogo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:19px;margin-bottom:10px}
-.fchips span{display:inline-block;border:1px solid rgba(255,255,255,.18);border-radius:99px;padding:4px 12px;font-size:13px;margin:12px 6px 0 0;color:#dbe6f2}
-.legal{border-top:1px solid rgba(255,255,255,.12);padding:18px 0;font-size:14px;color:#8FA3BA}
+.fband h3{color:#fff;font-size:30px;font-weight:800}.fband p{margin:6px 0 0;color:#b9cde2}
+.fcols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:36px;padding-top:52px;padding-bottom:40px}
+footer h4{color:#fff;font:700 17px "Bricolage",sans-serif;margin:0 0 12px}
+footer .fl a{display:block;color:#C9D6E6;text-decoration:none;margin:6px 0}footer .fl a:hover{color:var(--cyan)}
+footer a.fe{color:var(--cyan);font-weight:600;text-decoration:underline}
+.flogo{font:800 20px "Bricolage",sans-serif;color:#fff;margin-bottom:10px}
+.chips span{display:inline-block;border:1px solid rgba(255,255,255,.2);border-radius:99px;padding:3px 12px;font-size:14px;margin:12px 6px 0 0;color:#dbe6f2}
+.legal{border-top:1px solid rgba(255,255,255,.12);padding:18px 0;font-size:14.5px;color:#8FA3BA}
 .legal .w{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-@media(max-width:900px){.fcols{grid-template-columns:1fr 1fr;gap:28px}.fband h3{font-size:24px}}
-@media(max-width:560px){.fcols{grid-template-columns:1fr}.fband .acts .btn{width:100%;justify-content:center}.legal .w{flex-direction:column}}
+.bottombar{display:none}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--navy);color:#fff;padding:12px 18px;border-radius:10px;z-index:50;font-size:15px}
+
+@media(max-width:1020px){nav{display:none}}
+@media(max-width:900px){
+ :root{--gut:40px}
+ .sec{padding:60px 0}.sec>.w>.rail::before{top:-60px;bottom:-60px;left:15px}.sec>.w>.rail::after{left:7px}
+ .hero .cols,.paths,.find{grid-template-columns:1fr;gap:36px}
+ .list{grid-template-columns:1fr}
+ .ticket{transform:none;max-width:460px}
+ .fcols{grid-template-columns:1fr 1fr}
+ body{padding-bottom:76px}
+ .bottombar{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--navy);padding:10px 14px;border-top:1px solid rgba(255,255,255,.12)}
+ .bottombar .btn{flex:1;justify-content:center;padding:12px 10px;font-size:16px}
+}
+@media(max-width:560px){
+ .list li{grid-template-columns:1fr;gap:2px}
+ .fcols{grid-template-columns:1fr}
+ .btn{width:100%;justify-content:center}header .btn.sm{display:none}.brand{white-space:nowrap}
+ .prices .n{font-size:18px}.prices .v{font-size:24px}
+ .legal .w{flex-direction:column}
+}
 </style>
 </head>
-<body data-t="night">
+<body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-<symbol id="ps" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="17" rx="2"/><path d="M10 7h4M4.5 22h15"/></symbol>
-<symbol id="xbox" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="10" rx="2"/><circle cx="12" cy="12" r="2.5"/></symbol>
-<symbol id="switch" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="3"/><path d="M8 6v12M16 6v12"/></symbol>
-<symbol id="ctrl" viewBox="0 0 24 24"><path d="M6 11h4M8 9v4M15 12h.01M18 10h.01M17.3 5H6.7a4 4 0 0 0-3.9 3.1l-1.5 6.4A2.6 2.6 0 0 0 5.9 17l1.6-1.6a2 2 0 0 1 1.4-.6h6.2a2 2 0 0 1 1.4.6l1.6 1.6a2.6 2.6 0 0 0 4.6-2.5l-1.5-6.4A4 4 0 0 0 17.3 5Z"/></symbol>
-<symbol id="phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M12 18h.01"/></symbol>
-<symbol id="tablet" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2.5"/><path d="M12 18h.01"/></symbol>
-<symbol id="laptop" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19.5h20"/></symbol>
-<symbol id="cpu" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></symbol>
-<symbol id="skin" viewBox="0 0 24 24"><path d="M12 3l2 5.2L19.2 10 14 12l-2 5.2L10 12 4.8 10 10 8.2z"/><path d="M19 17v4M17 19h4"/></symbol>
-<symbol id="check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol><symbol id="pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
-<symbol id="home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></symbol>
 <symbol id="chat" viewBox="0 0 24 24"><path d="M21 12a8.5 8.5 0 0 1-12.3 7.6L3 21l1.4-5.5A8.5 8.5 0 1 1 21 12Z"/></symbol>
-<symbol id="shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5L16 9.5"/></symbol>
-<symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
-<symbol id="tag" viewBox="0 0 24 24"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1"/></symbol>
-<symbol id="wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0 5 5L22 13.6a2 2 0 0 1 0 2.8l-5.6 5.6a2 2 0 0 1-2.8 0L2 10.4a2 2 0 0 1 0-2.8L7.6 2a2 2 0 0 1 2.8 0z" transform="scale(.9) translate(1.3 1.3)"/></symbol>
+<symbol id="pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
 </svg>
-<div class="strip"><div class="w"><span><svg class="i" aria-hidden="true"><use href="#home"/></svg>Home pickup and return, flat £30</span><span><svg class="i" aria-hidden="true"><use href="#chat"/></svg>We reply within 12 hours</span><span><svg class="i" aria-hidden="true"><use href="#pin"/></svg>Drop-off shop open 9am to 9pm</span></div></div>
-<header><div class="w bar"><a class="brand" href="#top"><span class="logo"><svg viewBox="0 0 120 120" width="26" height="26" aria-hidden="true"><g fill="none" stroke="#101C2D" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"><path d="M31 30v60"/><path d="M48 30h14a30 30 0 0 1 0 60H48z"/></g></svg></span>Irvine DeviceWorks</a>
+
+<header><div class="w bar">
+<a class="brand" href="#top"><span class="lg"><svg viewBox="0 0 120 120" width="24" height="24" aria-hidden="true"><g fill="none" stroke="#0B1F3A" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><path d="M31 30v60"/><path d="M48 30h14a30 30 0 0 1 0 60H48z"/></g></svg></span>Irvine DeviceWorks</a>
 <nav aria-label="Main"><a href="#repairs">What we repair</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#find">Drop-off shop</a><a href="#faq">FAQ</a></nav>
-<a class="btn sm" data-wa href="#"><svg class="i" aria-hidden="true" style="width:19px;height:19px"><use href="#chat"/></svg>WhatsApp us</a></div></header>
+<a class="btn sm" data-wa href="#"><svg class="i" aria-hidden="true" style="width:19px;height:19px"><use href="#chat"/></svg>WhatsApp us</a>
+</div></header>
+
 <main id="top">
-<div class="hero"><div class="w"><div>
-<span class="eyebrow"><svg class="i" style="width:17px;height:17px" aria-hidden="true"><use href="#home"/></svg>We collect and return, or you drop off</span>
-<h1>We collect it, fix it and bring it back.</h1>
-<p class="lead">Phone, console and computer repairs in Irvine and Ayrshire. We pick your device up from your door and return it repaired, or you drop it off at the shop. You get a clear quote before any work starts.</p>
+<section class="sec dark first hero"><div class="w"><div class="rail"></div><div class="cols">
+<div>
+<h1><span>We collect it.</span><span>We fix it.</span><span>We bring it back.</span></h1>
+<p class="lead">Phone, console and computer repairs in Irvine, Ayr and Kilmarnock. Tell us what's wrong on WhatsApp. If it looks fixable, we collect it from your door, quote you, repair it and return it.</p>
 <div class="cta"><a class="btn" data-wa href="#"><svg class="i" aria-hidden="true"><use href="#chat"/></svg>Book a pickup on WhatsApp</a><a class="btn o" href="#how">See how it works</a></div>
-<div class="ticks"><span><svg class="i" aria-hidden="true"><use href="#check"/></svg>Quote before any work</span><span><svg class="i" aria-hidden="true"><use href="#check"/></svg>30-day warranty</span><span><svg class="i" aria-hidden="true"><use href="#check"/></svg>Free assessment</span></div>
-<ul class="devs"><li><svg class="i" aria-hidden="true"><use href="#ps"/></svg>PS5 and PS4</li><li><svg class="i" aria-hidden="true"><use href="#xbox"/></svg>Xbox</li><li><svg class="i" aria-hidden="true"><use href="#switch"/></svg>Switch</li><li><svg class="i" aria-hidden="true"><use href="#ctrl"/></svg>Controllers</li><li><svg class="i" aria-hidden="true"><use href="#phone"/></svg>Phones</li><li><svg class="i" aria-hidden="true"><use href="#laptop"/></svg>Computers</li></ul>
+<p class="fine">Flat £30 pickup and return. You approve the price before any work starts.</p>
 </div>
-<div class="steps"><h2>How we do it</h2><span style="font-size:15.5px;color:var(--mute)">You approve the price before any work starts.</span>
-<div class="ways"><div class="way main"><span class="badge">Our main service</span><svg class="i" aria-hidden="true"><use href="#home"/></svg><b>We collect and return</b><span>Tell us the problem on WhatsApp. If it looks fixable, we pick it up from your door, repair it and bring it back.</span><em>Flat £30 pickup and return</em></div>
-<div class="way alt2"><svg class="i" aria-hidden="true"><use href="#pin"/></svg><b>Or drop it off yourself</b><span>Hand it to the till at Anne's Stores, Monday to Sunday, 9am to 9pm. Collecting from the shop is free.</span><em>Free assessment</em></div></div>
-<p class="then"><b>Then:</b> we send a quote, you approve it, we repair it and tell you when it's ready.</p></div>
-</div></div>
+<aside class="ticket" aria-label="Example repair ticket">
+<div class="tk-top"><b>Repair ticket</b><span class="tk-ref">TR-0042</span></div>
+<p class="tk-dev">Example job: phone with a cracked screen</p>
+<ol class="tk-steps" id="steps">
+<li><i></i>Collected from your door<small>Pickup booked once we know it's fixable</small></li>
+<li><i></i>Quote sent, you approve<small>No work starts until you say yes</small></li>
+<li><i></i>Repaired at our workshop<small>Typically 24 to 48 hours</small></li>
+<li><i></i>Tested and ready<small>We message you the moment it is</small></li>
+<li><i></i>Back at your door<small>30-day warranty starts</small></li>
+</ol>
+<div class="tk-note">Every job gets a reference like this one, in your WhatsApp chat.</div>
+</aside>
+</div></div></section>
 
-<section id="repairs" class="light"><div class="w"><h2 class="t">What we repair</h2><p class="sub">Every repair starts with an assessment and a quote. You approve the price before any work begins.</p>
-<div class="grid9"><div class="card"><svg class="i" aria-hidden="true"><use href="#ps"/></svg><h3>PlayStation 5 and 4</h3><p>HDMI ports, overheating, SSD upgrades and fault diagnosis.</p></div><div class="card"><svg class="i" aria-hidden="true"><use href="#xbox"/></svg><h3>Xbox One, Series X and S</h3><p>HDMI ports, overheating and fault diagnosis.</p></div><div class="card"><svg class="i" aria-hidden="true"><use href="#switch"/></svg><h3>Nintendo Switch</h3><p>Screen replacement, game card reader, Joy-Con and joystick repairs.</p></div><div class="card"><svg class="i" aria-hidden="true"><use href="#ctrl"/></svg><h3>Controllers and stick drift</h3><p>PlayStation, Xbox and Switch. Joystick replacement, Hall-effect upgrades, buttons and shells.</p></div><div class="card"><svg class="i" aria-hidden="true"><use href="#phone"/></svg><h3>iPhone and Android</h3><p>Screens, batteries, charging ports, cameras, speakers and microphones.</p></div><div class="card"><svg class="i" aria-hidden="true"><use href="#tablet"/></svg><h3>Tablets</h3><p>iPad, Android and Amazon Fire. Screens, batteries and charging ports.</p></div><div class="card"><svg class="i" aria-hidden="true"><use href="#laptop"/></svg><h3>Laptops, desktops and Macs</h3><p>Screens, batteries, cooling, Windows and macOS fixes, iMac repairs.</p></div><div class="card"><svg class="i" aria-hidden="true"><use href="#cpu"/></svg><h3>PC builds and upgrades</h3><p>Custom and gaming PCs, SSD, RAM, CPU and graphics card upgrades.</p></div><div class="card"><svg class="i" aria-hidden="true"><use href="#skin"/></svg><h3>Skins and accessories</h3><p>Console and controller skins, HDMI and power cables. Ordered items can take around two weeks.</p></div></div>
-<p class="note">We don't repair TVs, drones or keyboards, and we don't offer data recovery. All repairs depend on assessment and parts availability.</p></div></section>
+<section id="repairs" class="sec white"><div class="w"><div class="rail"></div><div>
+<h2 class="t">What we repair</h2>
+<p class="sub">Every repair starts with an assessment and a quote. You approve the price before any work begins.</p>
+<ul class="list">
+<li><b>PlayStation 5 and 4</b><span>HDMI ports, overheating, SSD upgrades and fault diagnosis.</span></li>
+<li><b>Xbox One, Series X and S</b><span>HDMI ports, overheating and fault diagnosis.</span></li>
+<li><b>Nintendo Switch</b><span>Screen replacement, game card reader, Joy-Con and joystick repairs.</span></li>
+<li><b>Controllers and stick drift</b><span>PlayStation, Xbox and Switch. Joystick replacement, Hall-effect upgrades, buttons and shells.</span></li>
+<li><b>iPhone and Android</b><span>Screens, batteries, charging ports, cameras, speakers and microphones.</span></li>
+<li><b>Tablets</b><span>iPad, Android and Amazon Fire. Screens, batteries and charging ports.</span></li>
+<li><b>Laptops, desktops and Macs</b><span>Screens, batteries, cooling, Windows and macOS fixes, iMac repairs.</span></li>
+<li><b>PC builds and upgrades</b><span>Custom and gaming PCs, SSD, RAM, CPU and graphics card upgrades.</span></li>
+<li><b>Skins and accessories</b><span>Console and controller skins, HDMI and power cables. Ordered items can take around two weeks.</span></li>
+</ul>
+<p class="note">We don't repair TVs, drones or keyboards, and we don't offer data recovery. All repairs depend on assessment and parts availability.</p>
+</div></div></section>
 
-<section id="how" class="light soft"><div class="w"><h2 class="t">How it works</h2><p class="sub">Repairs are done at our own workshop. The shop is only a drop-off and collection point.</p>
-<div class="two"><div class="path feat"><span class="tag solid">Our main service</span><h3><svg class="i" aria-hidden="true"><use href="#home"/></svg>Home pickup and return</h3><ol><li>Message us on WhatsApp with your device, the fault and photos.</li><li>We reply personally, usually within 12 hours, and tell you if it looks fixable.</li><li>Once you agree, we arrange a pickup from your home.</li><li>We assess it and send you a quote. You approve the price before we repair.</li><li>We repair and test it, then bring it back to your door.</li></ol><span class="tag">Flat £30 for pickup and return</span></div>
-<div class="path"><h3><svg class="i" aria-hidden="true"><use href="#pin"/></svg>Or drop it off at the shop</h3><ol><li>Message us on WhatsApp, from your own phone or the in-store iPad, and get a reference number.</li><li>Write the reference on the packaging and hand it to the till.</li><li>We assess it and send you a quote. You approve or decline.</li><li>We tell you when it's ready. Collect it from the shop for free.</li><li>Prefer it delivered after a shop drop-off? That's a flat £15.</li></ol><span class="tag">Free assessment. Shop open Monday to Sunday, 9am to 9pm.</span></div></div></div></section>
+<section id="how" class="sec paper"><div class="w"><div class="rail"></div><div>
+<h2 class="t">How it works</h2>
+<p class="sub">Repairs are done at our own workshop. The shop is only a drop-off and collection point.</p>
+<div class="paths">
+<div class="path"><span class="kick">Our main service</span><h3>Home pickup and return</h3>
+<ol><li>Message us on WhatsApp with your device, the fault and photos.</li><li>We reply personally, usually within 12 hours, and tell you if it looks fixable.</li><li>Once you agree, we arrange a pickup from your home.</li><li>We assess it and send you a quote. You approve the price before we repair.</li><li>We repair and test it, then bring it back to your door.</li></ol>
+<span class="cost">Flat £30 for pickup and return</span></div>
+<div class="path"><h3>Or drop it off at the shop</h3>
+<ol><li>Message us on WhatsApp, from your own phone or the in-store iPad, and get a reference number.</li><li>Write the reference on the packaging and hand it to the till.</li><li>We assess it and send you a quote. You approve or decline.</li><li>We tell you when it's ready. Collect it from the shop for free.</li><li>Prefer it delivered after a shop drop-off? That's a flat £15.</li></ol>
+<span class="cost">Free assessment. Shop open Monday to Sunday, 9am to 9pm.</span></div>
+</div></div></div></section>
 
-<section id="pricing"><div class="w"><h2 class="t">Pricing and what to expect</h2><p class="sub">Repair prices depend on the device and fault, so we quote each job. You always approve the price first.</p>
-<div class="promise"><div class="card"><svg class="i" aria-hidden="true" style="color:var(--acc);width:28px;height:28px"><use href="#home"/></svg><b>£30</b><span>Home pickup and return, both ways. We only book a pickup once you've described the fault and we've said it looks fixable. Payable even if you then decline the repair. Waived if we can't repair your device.</span></div><div class="card"><svg class="i" aria-hidden="true" style="color:var(--acc);width:28px;height:28px"><use href="#tag"/></svg><b>£15</b><span>Delivery to your home if you first handed the device in at the shop. Collecting from the shop is free.</span></div><div class="card"><svg class="i" aria-hidden="true" style="color:var(--acc);width:28px;height:28px"><use href="#shield"/></svg><b>30 days</b><span>Warranty on every repair we complete.</span></div><div class="card"><svg class="i" aria-hidden="true" style="color:var(--acc);width:28px;height:28px"><use href="#clock"/></svg><b>24 to 48 hours</b><span>Typical turnaround for standard repairs. A target, not a guarantee.</span></div><div class="card"><svg class="i" aria-hidden="true" style="color:var(--acc);width:28px;height:28px"><use href="#pin"/></svg><b>14 days</b><span>To collect your device after we tell you it's ready.</span></div></div></div></section>
+<section id="pricing" class="sec white"><div class="w"><div class="rail"></div><div>
+<h2 class="t">Pricing and what to expect</h2>
+<p class="sub">Repair prices depend on the device and fault, so we quote each job. You always approve the price first.</p>
+<ul class="prices">
+<li><span class="n">Home pickup and return</span><span class="d"></span><span class="v">£30</span><p>Both ways. We only book a pickup once you've described the fault and we've said it looks fixable. Payable even if you then decline the repair. Waived if we can't repair your device.</p></li>
+<li><span class="n">Delivery after a shop drop-off</span><span class="d"></span><span class="v">£15</span><p>Delivery to your home if you first handed the device in at the shop. Collecting from the shop is free.</p></li>
+<li><span class="n">Warranty on every repair</span><span class="d"></span><span class="v">30 days</span><p>Applies to every repair we complete.</p></li>
+<li><span class="n">Typical turnaround</span><span class="d"></span><span class="v">24 to 48 hours</span><p>For standard repairs. A target, not a guarantee.</p></li>
+<li><span class="n">Time to collect when ready</span><span class="d"></span><span class="v">14 days</span><p>After we tell you it's ready.</p></li>
+</ul>
+</div></div></section>
 
-<section id="find" class="light"><div class="w"><h2 class="t">Or drop it off at the shop</h2><p class="sub">Prefer to bring it in yourself? Anne's Stores on Burns Street, Irvine is our family-owned drop-off point. Walk in any day between 9am and 9pm and hand your device to the till with your reference number.</p>
-<div class="findus"><div class="info">
-<div class="card"><b>Drop-off point</b><p>Anne's Stores<br>22 Burns Street, Irvine KA12 8RP</p></div>
-<div class="card"><b>Opening hours</b><p>Monday to Sunday, 9am to 9pm</p></div>
-<div class="card"><b>Email</b><p><a href="mailto:info@irvinedeviceworks.uk">info@irvinedeviceworks.uk</a></p></div>
-<div class="card"><b>Home pickup areas</b><div class="chips"><span>Irvine</span><span>Ayr</span><span>Kilmarnock</span><span>Surrounding areas</span></div><p style="margin-top:8px;font-size:14.5px">Subject to scheduling. Message us with your town and we'll confirm.</p></div>
-<div class="actions"><a class="btn" data-dir href="https://www.google.com/maps/dir/?api=1&destination=Anne%27s%20Stores%2C%2022%20Burns%20Street%2C%20Irvine%20KA12%208RP" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#pin"/></svg>Get directions</a><a class="btn o" data-wa href="#"><svg class="i" aria-hidden="true"><use href="#chat"/></svg>Book a pickup</a></div></div>
-<div class="map"><iframe title="Map showing Anne's Stores, 22 Burns Street, Irvine" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Anne%27s%20Stores%2C%2022%20Burns%20Street%2C%20Irvine%20KA12%208RP&z=16&output=embed" allowfullscreen></iframe></div></div></div></section>
+<section id="find" class="sec paper"><div class="w"><div class="rail"></div><div>
+<h2 class="t">Or drop it off at the shop</h2>
+<p class="sub">Anne's Stores on Burns Street, Irvine is our family-owned drop-off point. Walk in any day between 9am and 9pm and hand your device to the till with your reference number.</p>
+<div class="find"><div>
+<div class="facts">
+<div><b>Drop-off point</b><span>Anne's Stores, 22 Burns Street, Irvine KA12 8RP</span></div>
+<div><b>Opening hours</b><span>Monday to Sunday, 9am to 9pm</span></div>
+<div><b>Email</b><a href="mailto:info@irvinedeviceworks.uk">info@irvinedeviceworks.uk</a></div>
+<div><b>Home pickup areas</b><span>Irvine, Ayr, Kilmarnock and surrounding areas. Subject to scheduling: message us your town and we'll confirm.</span></div>
+</div>
+<div class="acts"><a class="btn" data-dir href="https://www.google.com/maps/dir/?api=1&destination=Anne%27s%20Stores%2C%2022%20Burns%20Street%2C%20Irvine%20KA12%208RP" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#pin"/></svg>Get directions</a><a class="btn o" data-wa href="#"><svg class="i" aria-hidden="true"><use href="#chat"/></svg>Book a pickup</a></div>
+</div>
+<div class="map"><iframe title="Map showing Anne's Stores, 22 Burns Street, Irvine" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Anne%27s%20Stores%2C%2022%20Burns%20Street%2C%20Irvine%20KA12%208RP&z=16&output=embed" allowfullscreen></iframe></div>
+</div></div></div></section>
 
-<section id="faq" class="light soft"><div class="w faq" style="max-width:800px"><h2 class="t" style="text-align:center">Questions people ask</h2>
+<section id="faq" class="sec white"><div class="w"><div class="rail"></div><div>
+<h2 class="t">Questions people ask</h2>
+<div class="faq">
 <details><summary>How does home pickup work?</summary><p>Message us on WhatsApp and describe the fault. If it looks fixable, we arrange a pickup from your home, repair the device and bring it back. Pickup and return is a flat £30.</p></details>
 <details><summary>Do I pay before you start?</summary><p>No. We send a quote first and only start once you approve it.</p></details>
 <details><summary>What if you can't fix it?</summary><p>You don't pay for the repair, and the £30 pickup and return fee is waived.</p></details>
 <details><summary>What if I change my mind after pickup?</summary><p>We only book a pickup once you've agreed and we've told you the device looks fixable. If you then decline the repair, the £30 pickup and return fee still applies.</p></details>
 <details><summary>I dropped it off at the shop. Can you deliver it to me?</summary><p>Yes. Delivery to your home after a shop drop-off is a flat £15. Collecting from the shop is free.</p></details>
 <details><summary>Are repairs done in the shop?</summary><p>No. The shop is a drop-off and collection point only. Repairs are done at our own workshop.</p></details>
-<details><summary>I can't use WhatsApp. What now?</summary><p>Visit the drop-off shop and use the iPad there to message us.</p></details></div></section>
+<details><summary>I can't use WhatsApp. What now?</summary><p>Visit the drop-off shop and use the iPad there to message us.</p></details>
+</div></div></div></section>
 </main>
+
 <footer>
-<div class="fband"><div class="w"><div><h3>Broken device? We'll collect it.</h3><p>Message us what's wrong. Quote first, and we only collect once we know it's fixable.</p></div><div class="acts"><a class="btn" data-wa href="#"><svg class="i" aria-hidden="true"><use href="#chat"/></svg>WhatsApp us</a><a class="btn o" data-dir href="https://www.google.com/maps/dir/?api=1&destination=Anne%27s%20Stores%2C%2022%20Burns%20Street%2C%20Irvine%20KA12%208RP" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#pin"/></svg>Get directions</a></div></div></div>
+<div class="fband"><div class="w"><div><h3>Broken device? We'll collect it.</h3><p>Message us what's wrong. Quote first, and we only collect once we know it's fixable.</p></div><div class="cta" style="margin:0"><a class="btn" data-wa href="#"><svg class="i" aria-hidden="true"><use href="#chat"/></svg>WhatsApp us</a><a class="btn o" data-dir href="https://www.google.com/maps/dir/?api=1&destination=Anne%27s%20Stores%2C%2022%20Burns%20Street%2C%20Irvine%20KA12%208RP" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#pin"/></svg>Get directions</a></div></div></div>
 <div class="w fcols">
-<div><div class="flogo">Irvine DeviceWorks</div>We collect it, fix it and bring it back. Repairs, upgrades and customisation for phones, tablets, laptops and consoles.<div class="fchips"><span>30-day warranty</span><span>Free assessment</span><span>Home pickup &amp; return</span></div></div>
+<div><div class="flogo">Irvine DeviceWorks</div>We collect it, fix it and bring it back. Repairs, upgrades and customisation for phones, tablets, laptops and consoles.<div class="chips"><span>30-day warranty</span><span>Free assessment</span><span>Home pickup &amp; return</span></div></div>
 <div class="fl"><h4>What we repair</h4><a href="#repairs">Phones &amp; tablets</a><a href="#repairs">Laptops &amp; PCs</a><a href="#repairs">Consoles &amp; controllers</a><a href="#repairs">Upgrades &amp; SSDs</a><a href="#repairs">Skins &amp; custom shells</a></div>
 <div class="fl"><h4>Explore</h4><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#find">Drop-off shop</a><a href="#faq">FAQ</a></div>
-<div class="fl"><h4>Contact</h4><a class="fe" href="mailto:info@irvinedeviceworks.uk">info@irvinedeviceworks.uk</a>WhatsApp: <span class="ph" data-wa-number>[number]</span><br><span data-shop-address>Anne's Stores, 22 Burns Street, Irvine KA12 8RP</span><br>Monday to Sunday, 9am to 9pm<br>Pickup: Irvine, Ayr &amp; Kilmarnock</div>
+<div class="fl"><h4>Contact</h4><a class="fe" href="mailto:info@irvinedeviceworks.uk">info@irvinedeviceworks.uk</a>WhatsApp: <span data-wa-number>07887 206031</span><br><span data-shop-address>Anne's Stores, 22 Burns Street, Irvine KA12 8RP</span><br>Monday to Sunday, 9am to 9pm<br>Pickup: Irvine, Ayr &amp; Kilmarnock</div>
 </div>
 <div class="legal"><div class="w"><span>&copy; 2026 Irvine DeviceWorks. All rights reserved.</span><span>Repairs &middot; Upgrades &middot; Customisation</span></div></div>
 </footer>
-<div class="bottombar"><a class="btn" data-wa href="#"><svg class="i" aria-hidden="true" style="width:20px;height:20px"><use href="#chat"/></svg>Book pickup</a><a class="btn o" data-dir href="https://www.google.com/maps/dir/?api=1&destination=Anne%27s%20Stores%2C%2022%20Burns%20Street%2C%20Irvine%20KA12%208RP" target="_blank" rel="noopener"><svg class="i" aria-hidden="true" style="width:20px;height:20px"><use href="#pin"/></svg>Shop directions</a></div>
-<div id="toast" role="status" hidden style="position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#101C2D;color:#fff;border:1px solid #39BDF5;padding:12px 18px;border-radius:10px;font-size:15px;box-shadow:0 6px 24px rgba(0,0,0,.25);z-index:9">Preview only: the WhatsApp number is not set yet.</div>
+<div class="bottombar"><a class="btn" data-wa href="#"><svg class="i" aria-hidden="true"><use href="#chat"/></svg>Book pickup</a><a class="btn o" data-dir href="https://www.google.com/maps/dir/?api=1&destination=Anne%27s%20Stores%2C%2022%20Burns%20Street%2C%20Irvine%20KA12%208RP" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#pin"/></svg>Shop directions</a></div>
+<div id="toast" role="status" hidden>Preview only: the WhatsApp number is not set yet.</div>
+
 <script src="config.js"></script>
 <script>
 (function(){
@@ -218,9 +284,16 @@ footer a.fe{color:#22d3ee;font-weight:600;text-decoration:underline}footer a.fe:
     if(link){a.href=link;a.target="_blank";a.rel="noopener"}
     else a.addEventListener("click",function(e){e.preventDefault();var t=document.getElementById("toast");t.hidden=false;clearTimeout(window._t);window._t=setTimeout(function(){t.hidden=true},3500)});
   });
-  if(c.WHATSAPP_DISPLAY)document.querySelectorAll("[data-wa-number]").forEach(function(e){e.textContent=c.WHATSAPP_DISPLAY;e.className=""});
+  if(c.WHATSAPP_DISPLAY)document.querySelectorAll("[data-wa-number]").forEach(function(e){e.textContent=c.WHATSAPP_DISPLAY});
   if(c.SHOP_ADDRESS)document.querySelectorAll('[data-dir]').forEach(function(a){a.href='https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(c.SHOP_ADDRESS)});
-  if(c.SHOP_ADDRESS)document.querySelectorAll("[data-shop-address]").forEach(function(e){e.textContent=c.SHOP_ADDRESS;e.className=""});
+  if(c.SHOP_ADDRESS)document.querySelectorAll("[data-shop-address]").forEach(function(e){e.textContent=c.SHOP_ADDRESS});
+
+  /* the one moment of motion: the ticket ticks through its steps once, then stays still */
+  var items=[].slice.call(document.querySelectorAll("#steps li"));
+  var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(reduce){items.forEach(function(li){li.classList.add("on")});return}
+  document.documentElement.classList.add("js");
+  items.forEach(function(li,i){setTimeout(function(){li.classList.add("on")},900+i*650)});
 })();
 </script>
 </body>
