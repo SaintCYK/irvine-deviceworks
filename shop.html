@@ -183,7 +183,9 @@ ol li:nth-child(1)::before{animation-delay:3s}ol li:nth-child(2)::before{animati
   var go=document.getElementById("go");
   if(link){
     var kiosk=(c.KIOSK_URL||"").trim();
-    if(kiosk){go.textContent="Fill in the form here";go.href=kiosk;go.nextElementSibling.textContent="No working phone? Fill in a short form on this iPad and get your reference number.";go.parentNode.querySelector("h2").textContent="Or use this iPad"}
+    if(kiosk){go.textContent="Fill in the form here";go.href=kiosk;go.nextElementSibling.textContent="No working phone? Fill in a short form on this iPad and get your reference number.";go.parentNode.querySelector("h2").textContent="Or use this iPad";
+      var chk=document.createElement("a");chk.className="btn";chk.style.marginTop="14px";chk.style.background="transparent";chk.style.border="3px solid #fff";chk.style.color="#fff";
+      chk.textContent="Check my job";chk.href=kiosk.replace(/\/kiosk\/?$/,"/job");go.parentNode.insertBefore(chk,go.nextElementSibling.nextSibling)}
     else{go.href=link}
     go.addEventListener("click",function(e){e.preventDefault();window.location.href=go.href});
     var q=qrcode(0,"M");q.addData(link);q.make();
