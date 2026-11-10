@@ -182,7 +182,10 @@ ol li:nth-child(1)::before{animation-delay:3s}ol li:nth-child(2)::before{animati
   var link=num?"https://wa.me/"+num+"?text="+encodeURIComponent(c.MESSAGE||"Hi, I'd like a quote for a repair."):"";
   var go=document.getElementById("go");
   if(link){
-    go.href=link;go.addEventListener("click",function(e){e.preventDefault();window.location.href=link});
+    var kiosk=(c.KIOSK_URL||"").trim();
+    if(kiosk){go.textContent="Fill in the form here";go.href=kiosk;go.nextElementSibling.textContent="No working phone? Fill in a short form on this iPad and get your reference number.";go.parentNode.querySelector("h2").textContent="Or use this iPad"}
+    else{go.href=link}
+    go.addEventListener("click",function(e){e.preventDefault();window.location.href=go.href});
     var q=qrcode(0,"M");q.addData(link);q.make();
     document.getElementById("qr").innerHTML=q.createSvgTag({cellSize:4,margin:0,scalable:true});
   }else{

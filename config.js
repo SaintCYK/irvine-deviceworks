@@ -7,5 +7,7 @@ window.SITE_CONFIG = {
   // Shop name and address shown in the footer. Example: "Shop name, 1 Street, Irvine KA12 0XX"
   SHOP_ADDRESS: "Anne's Stores, 22 Burns Street, Irvine KA12 8RP",
   // The text that is pre-filled when someone taps a WhatsApp button
+  // Shop iPad form address (the Repair Hub). Leave "" until the Hub is online; then the iPad button opens the form.
+  KIOSK_URL: "",
   MESSAGE: "Hi, I'd like a quote for a repair."
 };
